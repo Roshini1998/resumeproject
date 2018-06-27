@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="AJAX">
+<head>
+  <script src="angular.min.js"></script>
+  <script>
+  angular.module("AJAX",[]).
+  controller("myctrl",function($scope,$http){
+    $scope.Insert= function(){
+      $http({
+        url:"/post",
+        data:{
+          Name:$scope.Name,
+          Email:$scope.Email,
+          Phno:$scope.Phno,
+          Comments:$scope.Comments,
+
+  },
+        method:"POST"
+      }).then(function(output){
+        alert(JSON.stringify(output));
+        $scope.capital=output.capital;
+        
+      });
+
+    }
+  });
+  </script>
+  <style type="text/css">
+  
+.header{
+  width:100%;
+  height:50px;
+  color:white;
+  font-family: Lucida Calligraphy;
+  font-size: 45px;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body style="background-image: url(resume.jpg);background-size: cover;font-family: Lucida Calligraphy;color:white">
+  <div class="header" >
+    <header>
+      Comments
+    </header>
+  </div>
+  <br><br>
+<center><div ng-controller="myctrl" style="font-size: 20px" >
+            Name<br><input type="text" ng-model="Name" />
+          </br><br>
+            Email<br><input type="text" ng-model="Email"/>
+          </br><br>
+            Phno<br><input type="number" ng-model="Phno"/>
+          </br><br>
+          Comments<br><input type="textarea" ng-model="Comments"/>
+          </br><br>
+        <br>
+        <input type="button" value="Submit" ng-click="Insert()" /></div></center>
+    </body>
+    </html>
+

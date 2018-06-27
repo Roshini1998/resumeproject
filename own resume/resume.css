@@ -1,0 +1,63 @@
+body{
+	background-image: url(resume.jpg);
+	background-size: cover;
+	width: 100%;
+}
+.header{
+	width:100%;
+	height:50px;
+	color:white;
+	font-family: Lucida Calligraphy;
+	font-size: 45px;
+	text-align: center;
+	padding: 20px;
+}
+#profile{
+	float: right;
+	padding-right: 50px;
+}
+#marquee {
+	 list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    font-family: Lucida Calligraphy;
+	font-size: 35px;
+}
+.nav{
+	padding-top: 50px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    border-collapse: none;
+    background-color: black;
+    border: 1px solid black;
+ }   
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    font-family: Lucida Calligraphy;
+    text-decoration: none;
+
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
